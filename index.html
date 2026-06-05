@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="language-toggle">
+    <button class="lang-btn active" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="ar">العربية</button>
+  </div>
+
   <header class="hero">
     <div class="hero-content">
       <img class="logo" src="img/intel-header-logo.svg" alt="Intel Logo" />
       <div>
-        <h1>Sustainability Through the Ages</h1>
-        <p>
+        <h1 data-en="Sustainability Through the Ages" data-ar="الاستدامة عبر العصور">Sustainability Through the Ages</h1>
+        <p data-en="Explore Intel's journey through time and discover how innovation, responsibility, and sustainable design have shaped the future of technology." data-ar="استكشف رحلة إنتل عبر الزمن واكتشف كيف غيرت الابتكار والمسؤولية والتصميم المستدام مستقبل التكنولوجيا.">
           Explore Intel's journey through time and discover how innovation,
           responsibility, and sustainable design have shaped the future of
           technology.
@@ -23,8 +28,8 @@
 
   <main class="timeline-page">
     <section class="timeline-intro">
-      <h2>Intel Timeline</h2>
-      <p>
+      <h2 data-en="Intel Timeline" data-ar="الخط الزمني لـ إنتل">Intel Timeline</h2>
+      <p data-en="Each card highlights a milestone in Intel's history. Hover over a photo to reveal a richer visual detail and learn more about Intel's progress." data-ar="تسلط كل بطاقة الضوء على علامة فارقة في تاريخ إنتل. مرر مؤشر الماوس فوق الصورة لكشف المزيد من التفاصيل البصرية وتعرف على المزيد حول تقدم إنتل.">
         Each card highlights a milestone in Intel's history. Hover over a photo
         to reveal a richer visual detail and learn more about Intel's progress.
       </p>
@@ -34,12 +39,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/company.jpg" alt="Intel founders and early headquarters" />
-          <figcaption>Intel founded in 1968 with a vision for innovation.</figcaption>
+          <figcaption data-en="Intel founded in 1968 with a vision for innovation." data-ar="تم تأسيس إنتل في 1968 برؤية للابتكار.">Intel founded in 1968 with a vision for innovation.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">1968</span>
-          <h3>Intel Founded</h3>
-          <p>
+          <span class="card-year" data-en="1968" data-ar="1968">1968</span>
+          <h3 data-en="Intel Founded" data-ar="تأسيس إنتل">Intel Founded</h3>
+          <p data-en="Robert Noyce and Gordon Moore rename NM Electronics to Intel Corporation, setting the stage for computing breakthroughs." data-ar="يعيد روبرت نويس وجوردون مور تسمية شركة NM Electronics إلى Intel Corporation، مما يمهد الطريق لاختراقات حوسبية رائدة.">
             Robert Noyce and Gordon Moore rename NM Electronics to Intel
             Corporation, setting the stage for computing breakthroughs.
           </p>
@@ -49,12 +54,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/first%204004.jpg" alt="Intel 4004 microprocessor" />
-          <figcaption>Intel's early processor designs reshaped computing power.</figcaption>
+          <figcaption data-en="Intel's early processor designs reshaped computing power." data-ar="أعادت تصاميم معالجات إنتل المبكرة تشكيل قوة الحوسبة.">Intel's early processor designs reshaped computing power.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">1971</span>
-          <h3>First Microprocessor</h3>
-          <p>
+          <span class="card-year" data-en="1971" data-ar="1971">1971</span>
+          <h3 data-en="First Microprocessor" data-ar="أول معالج دقيق">First Microprocessor</h3>
+          <p data-en="Intel debuts the 4004, the world's first commercial microprocessor, launching the era of programmable computing." data-ar="أطلقت إنتل 4004، أول معالج دقيق تجاري في العالم، مما أطلق عصر الحوسبة البرمجية.">
             Intel debuts the 4004, the world's first commercial microprocessor,
             launching the era of programmable computing.
           </p>
@@ -64,12 +69,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/8086%20prosessor.png" alt="Intel 8086 processor packaging" />
-          <figcaption>The 8086 set the foundation for the x86 PC platform.</figcaption>
+          <figcaption data-en="The 8086 set the foundation for the x86 PC platform." data-ar="وضع 8086 الأساس لمنصة الحاسب الشخصي x86.">The 8086 set the foundation for the x86 PC platform.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">1978</span>
-          <h3>8086 Processor</h3>
-          <p>
+          <span class="card-year" data-en="1978" data-ar="1978">1978</span>
+          <h3 data-en="8086 Processor" data-ar="معالج 8086">8086 Processor</h3>
+          <p data-en="The 8086 processor launches, helping establish the x86 architecture that still powers modern PCs and servers." data-ar="يتم إطلاق معالج 8086، مما يساعد على إنشاء معمارية x86 التي لا تزال تغذي أجهزة الحاسب الشخصي والخوادم الحديثة.">
             The 8086 processor launches, helping establish the x86 architecture
             that still powers modern PCs and servers.
           </p>
@@ -79,12 +84,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/386.png" alt="Intel 386 microprocessor illustration" />
-          <figcaption>The 386 introduced 32-bit computing for a new generation.</figcaption>
+          <figcaption data-en="The 386 introduced 32-bit computing for a new generation." data-ar="قدم المعالج 386 الحوسبة بـ 32 بت لجيل جديد.">The 386 introduced 32-bit computing for a new generation.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">1985</span>
-          <h3>386 Processor</h3>
-          <p>
+          <span class="card-year" data-en="1985" data-ar="1985">1985</span>
+          <h3 data-en="386 Processor" data-ar="معالج 386">386 Processor</h3>
+          <p data-en="Intel introduces the 386 processor, bringing 32-bit architecture and advanced multitasking to a broader marketplace." data-ar="تقدم إنتل معالج 386، مما يجلب معمارية 32 بت والمعالجة المتعددة المتقدمة إلى سوق أوسع.">
             Intel introduces the 386 processor, bringing 32-bit architecture and
             advanced multitasking to a broader marketplace.
           </p>
@@ -94,12 +99,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/ghg%20emissions.png" alt="Intel greenhouse gas emissions" />
-          <figcaption>Intel invests in energy efficiency and sustainable operations.</figcaption>
+          <figcaption data-en="Intel invests in energy efficiency and sustainable operations." data-ar="تستثمر إنتل في كفاءة الطاقة والعمليات المستدامة.">Intel invests in energy efficiency and sustainable operations.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">2006</span>
-          <h3>Peak GHG Emissions</h3>
-          <p>
+          <span class="card-year" data-en="2006" data-ar="2006">2006</span>
+          <h3 data-en="Peak GHG Emissions" data-ar="ذروة انبعاثات غازات الدفيئة">Peak GHG Emissions</h3>
+          <p data-en="Intel reaches its highest annual greenhouse gas emissions and begins a major investment in clean energy, efficiency, and abatement." data-ar="تصل إنتل إلى أعلى انبعاثات غازات دفيئة سنوية وتبدأ استثمارًا كبيرًا في الطاقة النظيفة والكفاءة والتخفيف.">
             Intel reaches its highest annual greenhouse gas emissions and begins
             a major investment in clean energy, efficiency, and abatement.
           </p>
@@ -109,12 +114,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/rise.png" alt="RISE sustainability strategy" />
-          <figcaption>RISE goals unite sustainability and innovation for 2030.</figcaption>
+          <figcaption data-en="RISE goals unite sustainability and innovation for 2030." data-ar="تجمع أهداف RISE بين الاستدامة والابتكار لعام 2030.">RISE goals unite sustainability and innovation for 2030.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">2020</span>
-          <h3>RISE Strategy</h3>
-          <p>
+          <span class="card-year" data-en="2020" data-ar="2020">2020</span>
+          <h3 data-en="RISE Strategy" data-ar="استراتيجية RISE">RISE Strategy</h3>
+          <p data-en="Intel launches RISE — Responsible, Inclusive, Sustainable, Enabling — with ambitious goals for the next decade." data-ar="أطلقت إنتل RISE - المسؤولة والشاملة والمستدامة والتمكينية - مع أهداف طموحة للعقد القادم.">
             Intel launches RISE — Responsible, Inclusive, Sustainable, Enabling —
             with ambitious goals for the next decade.
           </p>
@@ -124,12 +129,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/net%20zero.jpg" alt="Intel net zero commitment" />
-          <figcaption>Intel commits to net-zero emissions across operations by 2040.</figcaption>
+          <figcaption data-en="Intel commits to net-zero emissions across operations by 2040." data-ar="تلتزم إنتل بتحقيق انبعاثات صفرية في جميع العمليات بحلول عام 2040.">Intel commits to net-zero emissions across operations by 2040.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">2022</span>
-          <h3>Net-Zero By 2040</h3>
-          <p>
+          <span class="card-year" data-en="2022" data-ar="2022">2022</span>
+          <h3 data-en="Net-Zero By 2040" data-ar="محايد الكربون بحلول 2040">Net-Zero By 2040</h3>
+          <p data-en="Intel announces a global commitment to reach net-zero Scope 1 and 2 greenhouse gas emissions by 2040." data-ar="أعلنت إنتل عن التزام عالمي للوصول إلى صفر انبعاثات غازات الدفيئة من النطاق 1 و 2 بحلول عام 2040.">
             Intel announces a global commitment to reach net-zero Scope 1 and 2
             greenhouse gas emissions by 2040.
           </p>
@@ -139,12 +144,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/renewable.jpg" alt="Renewable energy powering Intel facilities" />
-          <figcaption>Intel moves nearly entirely to renewable electricity worldwide.</figcaption>
+          <figcaption data-en="Intel moves nearly entirely to renewable electricity worldwide." data-ar="تنتقل إنتل بالكامل تقريبًا إلى الكهرباء المتجددة في جميع أنحاء العالم.">Intel moves nearly entirely to renewable electricity worldwide.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">2023</span>
-          <h3>Renewable Electricity</h3>
-          <p>
+          <span class="card-year" data-en="2023" data-ar="2023">2023</span>
+          <h3 data-en="Renewable Electricity" data-ar="الكهرباء المتجددة">Renewable Electricity</h3>
+          <p data-en="Intel reaches 99% renewable electricity usage across its global facilities, a major sustainability milestone." data-ar="تصل إنتل إلى استخدام 99٪ من الكهرباء المتجددة عبر منشآتها العالمية، وهي علامة فارقة رئيسية في الاستدامة.">
             Intel reaches 99% renewable electricity usage across its global
             facilities, a major sustainability milestone.
           </p>
@@ -154,12 +159,12 @@
       <article class="timeline-card">
         <figure class="card-image">
           <img src="img/sustainability.jpg" alt="Sustainability summit with Intel leaders" />
-          <figcaption>Industry leaders collaborate at Intel's Sustainability Summit.</figcaption>
+          <figcaption data-en="Industry leaders collaborate at Intel's Sustainability Summit." data-ar="يتعاون قادة الصناعة في قمة الاستدامة في إنتل.">Industry leaders collaborate at Intel's Sustainability Summit.</figcaption>
         </figure>
         <div class="card-copy">
-          <span class="card-year">2024</span>
-          <h3>Sustainability Summit</h3>
-          <p>
+          <span class="card-year" data-en="2024" data-ar="2024">2024</span>
+          <h3 data-en="Sustainability Summit" data-ar="قمة الاستدامة">Sustainability Summit</h3>
+          <p data-en="Intel hosts a global Sustainability Summit, bringing together leaders to accelerate sustainable semiconductor manufacturing." data-ar="تستضيف إنتل قمة استدامة عالمية، تجمع القادة معًا لتسريع تصنيع الأجهزة الكهربائية المستدامة.">
             Intel hosts a global Sustainability Summit, bringing together leaders
             to accelerate sustainable semiconductor manufacturing.
           </p>
@@ -169,7 +174,53 @@
   </main>
 
   <footer class="page-note">
-    <p>Scroll to view timeline | Hover over cards to view details.</p>
+    <p data-en="Scroll to view timeline | Hover over cards to view details." data-ar="قم بالتمرير لعرض الخط الزمني | مرر مؤشر الماوس فوق البطاقات لعرض التفاصيل.">Scroll to view timeline | Hover over cards to view details.</p>
   </footer>
+
+  <script>
+    // Language switching functionality
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const htmlElement = document.documentElement;
+    let currentLang = localStorage.getItem('language') || 'en';
+
+    // Set initial language
+    setLanguage(currentLang);
+
+    langButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        setLanguage(lang);
+        localStorage.setItem('language', lang);
+      });
+    });
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      
+      // Update HTML lang and dir attributes
+      htmlElement.setAttribute('lang', lang);
+      htmlElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      
+      // Update all text elements with data attributes
+      document.querySelectorAll('[data-en][data-ar]').forEach(element => {
+        const text = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+        if (element.tagName === 'P' || element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3') {
+          element.textContent = text;
+        } else if (element.tagName === 'FIGCAPTION') {
+          element.textContent = text;
+        } else if (element.tagName === 'SPAN') {
+          element.textContent = text;
+        }
+      });
+      
+      // Update active button
+      langButtons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
