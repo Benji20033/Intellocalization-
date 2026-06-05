@@ -222,6 +222,37 @@
     </section>
   </main>
 
+  <!-- Newsletter Subscription Section -->
+  <section class="newsletter-section">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-12">
+          <div class="newsletter-content">
+            <h2 data-en="Stay Updated on Sustainability" data-ar="ابقَ على اطلاع بآخر أخبار الاستدامة">Stay Updated</h2>
+            <p data-en="Subscribe to our newsletter to receive the latest news, innovations, and milestones in Intel's sustainability journey." data-ar="اشترك في نشرتنا الإخبارية لتلقي أحدث الأخبار والابتكارات والعلامات الفارقة في رحلة إنتل نحو الاستدامة.">Subscribe to our newsletter to receive the latest news, innovations, and milestones in Intel's sustainability journey.</p>
+            
+            <form class="newsletter-form" id="newsletterForm">
+              <div class="form-group">
+                <input 
+                  type="email" 
+                  class="form-control newsletter-input" 
+                  placeholder="your@email.com"
+                  data-en-placeholder="your@email.com"
+                  data-ar-placeholder="بريدك@email.com"
+                  required 
+                />
+              </div>
+              <button type="submit" class="btn btn-newsletter" data-en-text="Subscribe" data-ar-text="اشترك الآن">Subscribe</button>
+            </form>
+            
+            <div class="form-message" id="formMessage"></div>
+            <p class="newsletter-note" data-en="We respect your privacy. Unsubscribe anytime." data-ar="نحترم خصوصيتك. يمكنك إلغاء الاشتراك في أي وقت.">We respect your privacy. Unsubscribe anytime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="page-note">
     <p data-en="Scroll to view timeline | Hover over cards to view details." data-ar="قم بالتمرير لعرض الخط الزمني | مرر مؤشر الماوس فوق البطاقات لعرض التفاصيل.">Scroll to view timeline | Hover over cards to view details.</p>
   </footer>
@@ -267,6 +298,12 @@
         const btnText = lang === 'ar' ? button.getAttribute('data-ar-text') : button.getAttribute('data-en-text');
         button.textContent = btnText;
       });
+
+      // Update input placeholders
+      document.querySelectorAll('[data-en-placeholder][data-ar-placeholder]').forEach(input => {
+        const placeholder = lang === 'ar' ? input.getAttribute('data-ar-placeholder') : input.getAttribute('data-en-placeholder');
+        input.placeholder = placeholder;
+      });
       
       // Update active button
       langButtons.forEach(btn => {
@@ -289,6 +326,36 @@
         const btnText = currentLang === 'ar' ? this.getAttribute('data-ar-text') : this.getAttribute('data-en-text');
         alert(`${btnText} functionality would be implemented here!`);
       });
+    });
+
+    // Newsletter form handler
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const emailInput = this.querySelector('.newsletter-input');
+      const messageDiv = document.getElementById('formMessage');
+      const currentLang = document.documentElement.getAttribute('lang');
+      
+      const email = emailInput.value;
+      
+      // Simple email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        messageDiv.innerHTML = `<div class="alert alert-danger">${currentLang === 'ar' ? 'يرجى إدخال بريد إلكتروني صحيح' : 'Please enter a valid email address'}</div>`;
+        return;
+      }
+      
+      // Simulate form submission
+      const successMessage = currentLang === 'ar' 
+        ? `شكراً لاشتراكك! تحقق من بريدك الإلكتروني.`
+        : 'Thank you for subscribing! Check your email for confirmation.';
+      
+      messageDiv.innerHTML = `<div class="alert alert-success">${successMessage}</div>`;
+      emailInput.value = '';
+      
+      // Clear message after 5 seconds
+      setTimeout(() => {
+        messageDiv.innerHTML = '';
+      }, 5000);
     });
   </script>
 </body>
