@@ -293,7 +293,15 @@
   </section>
 
   <footer class="page-note">
-    <p data-en="Intel Sustainability Timeline" data-ar="الخط الزمني لاستدامة إنتل">Intel Sustainability Timeline</p>
+    <div class="container text-center py-3">
+      <p data-en="Intel Sustainability Timeline" data-ar="الخط الزمني لاستدامة إنتل">Intel Sustainability Timeline</p>
+      <p class="m-0" aria-label="copyright">
+        <span>&copy;</span>
+        <span id="copyright-year"></span>
+        <span data-en="Intel Corporation" data-ar="شركة إنتل">Intel Corporation</span>.
+        <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span>
+      </p>
+    </div>
   </footer>
 
   <script>
@@ -353,6 +361,10 @@
   
   <!-- Learn More Button Handler -->
   <script>
+    // Populate current year in footer
+    const yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
     document.querySelectorAll('.learn-more-btn').forEach(button => {
       button.addEventListener('click', function() {
         const currentLang = document.documentElement.getAttribute('lang');
