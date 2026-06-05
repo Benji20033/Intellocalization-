@@ -134,6 +134,12 @@ html[dir="rtl"] .timeline-intro {
   font-size: 1rem;
 }
 
+.timeline-hint p {
+  color: #80b8ff;
+  font-weight: 600;
+  margin: 0;
+}
+
 .timeline-grid {
   position: relative;
   display: flex;
@@ -267,13 +273,16 @@ html[dir="rtl"] .feature-card {
 }
 
 .feature-icon {
-  font-size: 3.5rem;
-  color: #80b8ff;
-  margin-bottom: 1.5rem;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  font-size: 3rem;
+  color: #80b8ff;
+  background: rgba(128, 184, 255, 0.12);
+  border-radius: 50%;
 }
 
 .feature-icon i {
