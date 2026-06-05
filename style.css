@@ -469,6 +469,66 @@ html[dir="rtl"] .newsletter-form {
   margin: 0;
 }
 
+/* Accordion Styles */
+.accordion-flush {
+  border-bottom: 1px solid rgba(128, 184, 255, 0.2);
+}
+
+.accordion-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(128, 184, 255, 0.2);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.accordion-item:first-child {
+  border-radius: 8px;
+}
+
+.accordion-item:last-child {
+  border-radius: 8px;
+}
+
+.accordion-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #80b8ff;
+  border: none;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  transition: all 300ms ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(0, 113, 197, 0.15);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  border-color: rgba(128, 184, 255, 0.3);
+  box-shadow: 0 0 0 0.25rem rgba(0, 113, 197, 0.15);
+}
+
+.accordion-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.accordion-body {
+  background: rgba(255, 255, 255, 0.03);
+  color: #d8e7ff;
+  border-top: 1px solid rgba(128, 184, 255, 0.15);
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.newsletter-note {
+  color: #9cd7ff;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 /* Mobile responsive adjustments for newsletter */
 @media (max-width: 640px) {
   .newsletter-form {

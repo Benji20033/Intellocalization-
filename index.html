@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Intel's sustainability journey across time, from the first microprocessor to net-zero commitments and renewable energy milestones." />
   <title>Intel: Sustainability Through the Ages</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -250,9 +251,41 @@
               </div>
               <button type="submit" class="btn btn-newsletter" data-en-text="Subscribe" data-ar-text="اشترك الآن">Subscribe</button>
             </form>
-            
+
+            <div class="accordion accordion-flush mt-4" id="subscriptionFaqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
+                    <span data-en="How will I receive updates?" data-ar="كيف سأستقبل التحديثات؟">How will I receive updates?</span>
+                  </button>
+                </h2>
+                <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#subscriptionFaqAccordion">
+                  <div class="accordion-body" data-en="You will receive occasional newsletter emails with sustainability news and Intel milestones." data-ar="ستتلقى رسائل إخبارية عبر البريد الإلكتروني تتضمن أخبار الاستدامة وعلامات إنتل الفارقة.">You will receive occasional newsletter emails with sustainability news and Intel milestones.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                    <span data-en="Is my email shared with others?" data-ar="هل يتم مشاركة بريدي الإلكتروني مع الآخرين؟">Is my email shared with others?</span>
+                  </button>
+                </h2>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#subscriptionFaqAccordion">
+                  <div class="accordion-body" data-en="No. We keep your email private and only use it for newsletter communication." data-ar="لا. نحتفظ ببريدك الإلكتروني خاصًا ونستخدمه فقط للتواصل عبر النشرة الإخبارية.">No. We keep your email private and only use it for newsletter communication.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                    <span data-en="Can I unsubscribe anytime?" data-ar="هل يمكنني إلغاء الاشتراك في أي وقت؟">Can I unsubscribe anytime?</span>
+                  </button>
+                </h2>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#subscriptionFaqAccordion">
+                  <div class="accordion-body" data-en="Yes. You can unsubscribe from the newsletter at any time using the link in every email." data-ar="نعم. يمكنك إلغاء الاشتراك في النشرة الإخبارية في أي وقت باستخدام الرابط في كل رسالة إلكترونية.">Yes. You can unsubscribe from the newsletter at any time using the link in every email.</div>
+                </div>
+              </div>
+            </div>
+
             <div class="form-message" id="formMessage"></div>
-            <p class="newsletter-note" data-en="We respect your privacy. Unsubscribe anytime." data-ar="نحترم خصوصيتك. يمكنك إلغاء الاشتراك في أي وقت.">We respect your privacy. Unsubscribe anytime.</p>
           </div>
         </div>
       </div>
@@ -290,13 +323,7 @@
       // Update all text elements with data attributes
       document.querySelectorAll('[data-en][data-ar]').forEach(element => {
         const text = lang === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
-        if (element.tagName === 'P' || element.tagName === 'H1' || element.tagName === 'H2' || element.tagName === 'H3') {
-          element.textContent = text;
-        } else if (element.tagName === 'FIGCAPTION') {
-          element.textContent = text;
-        } else if (element.tagName === 'SPAN') {
-          element.textContent = text;
-        }
+        element.textContent = text;
       });
       
       // Update button text
