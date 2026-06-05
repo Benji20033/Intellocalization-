@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -171,6 +175,51 @@
         </div>
       </article>
     </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container py-5">
+        <h2 class="text-center mb-5" data-en="Intel's Sustainability Pillars" data-ar="أركان الاستدامة في إنتل">Intel's Sustainability Pillars</h2>
+        
+        <div class="row g-4">
+          <!-- Column 1: Innovation -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-lightbulb"></i>
+              </div>
+              <h3 data-en="Innovation" data-ar="الابتكار">Innovation</h3>
+              <p data-en="Driving technological advancement while minimizing environmental impact through cutting-edge research and development." data-ar="دفع التقدم التكنولوجي مع تقليل التأثير البيئي من خلال البحث والتطوير المتطور.">Driving technological advancement while minimizing environmental impact through cutting-edge research and development.</p>
+              <button class="btn btn-primary learn-more-btn" data-en-text="Learn More" data-ar-text="تعرف على المزيد">Learn More</button>
+            </div>
+          </div>
+
+          <!-- Column 2: Responsibility -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3 data-en="Responsibility" data-ar="المسؤولية">Responsibility</h3>
+              <p data-en="Committing to ethical practices and transparent reporting of our environmental and social impact metrics." data-ar="الالتزام بالممارسات الأخلاقية والإبلاغ الشفاف عن مقاييس تأثيرنا البيئي والاجتماعي.">Committing to ethical practices and transparent reporting of our environmental and social impact metrics.</p>
+              <button class="btn btn-primary learn-more-btn" data-en-text="Learn More" data-ar-text="تعرف على المزيد">Learn More</button>
+            </div>
+          </div>
+
+          <!-- Column 3: Sustainability -->
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-leaf"></i>
+              </div>
+              <h3 data-en="Sustainability" data-ar="الاستدامة">Sustainability</h3>
+              <p data-en="Building a future where technology and environmental stewardship go hand in hand, creating lasting positive change." data-ar="بناء مستقبل حيث تسير التكنولوجيا والإشراف البيئي جنباً إلى جنب، مما يخلق تغييراً إيجابياً دائماً.">Building a future where technology and environmental stewardship go hand in hand, creating lasting positive change.</p>
+              <button class="btn btn-primary learn-more-btn" data-en-text="Learn More" data-ar-text="تعرف على المزيد">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-note">
@@ -213,6 +262,12 @@
         }
       });
       
+      // Update button text
+      document.querySelectorAll('[data-en-text][data-ar-text]').forEach(button => {
+        const btnText = lang === 'ar' ? button.getAttribute('data-ar-text') : button.getAttribute('data-en-text');
+        button.textContent = btnText;
+      });
+      
       // Update active button
       langButtons.forEach(btn => {
         btn.classList.remove('active');
@@ -221,6 +276,20 @@
         }
       });
     }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Learn More Button Handler -->
+  <script>
+    document.querySelectorAll('.learn-more-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const currentLang = document.documentElement.getAttribute('lang');
+        const btnText = currentLang === 'ar' ? this.getAttribute('data-ar-text') : this.getAttribute('data-en-text');
+        alert(`${btnText} functionality would be implemented here!`);
+      });
+    });
   </script>
 </body>
 </html>

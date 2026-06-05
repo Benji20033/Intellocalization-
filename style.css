@@ -193,7 +193,8 @@ html[dir="rtl"] .timeline-card::before {
 .card-image {
   position: relative;
   overflow: hidden;
-  min-height: 220px;
+  height: 220px;
+  width: 100%;
 }
 
 .card-image img {
@@ -225,6 +226,113 @@ html[dir="rtl"] .timeline-card::before {
 
 html[dir="rtl"] .card-image figcaption {
   text-align: right;
+}
+
+/* Features Section Styles */
+.features-section {
+  background: linear-gradient(180deg, rgba(8, 18, 46, 0.5) 0%, rgba(3, 16, 31, 0.8) 100%);
+  border-top: 1px solid rgba(128, 184, 255, 0.2);
+  border-bottom: 1px solid rgba(128, 184, 255, 0.2);
+  margin: 3rem 0;
+}
+
+.features-section h2 {
+  color: #80b8ff;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 300ms ease;
+  text-align: center;
+}
+
+html[dir="rtl"] .feature-card {
+  text-align: center;
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 113, 197, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 113, 197, 0.15);
+}
+
+.feature-icon {
+  font-size: 3.5rem;
+  color: #80b8ff;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.feature-icon i {
+  display: inline-block;
+}
+
+.feature-card h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.feature-card p {
+  color: #d8e7ff;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.learn-more-btn {
+  background: linear-gradient(135deg, #0071c5, #0051a5);
+  border: none;
+  color: #ffffff;
+  padding: 0.6rem 1.8rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 300ms ease;
+  align-self: center;
+  margin-top: auto;
+}
+
+.learn-more-btn:hover {
+  background: linear-gradient(135deg, #0085ff, #0071c5);
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 113, 197, 0.3);
+}
+
+.learn-more-btn:active {
+  transform: scale(0.98);
+}
+
+/* Override Bootstrap defaults for dark theme */
+.btn-primary {
+  --bs-btn-bg: linear-gradient(135deg, #0071c5, #0051a5);
+  --bs-btn-border-color: #0071c5;
+}
+
+.btn-primary:hover {
+  --bs-btn-bg: linear-gradient(135deg, #0085ff, #0071c5);
+  --bs-btn-border-color: #0085ff;
+}
+
+/* Bootstrap container spacing adjustments */
+.container {
+  max-width: 1200px;
 }
 
 .timeline-card:hover .card-image figcaption {
@@ -334,6 +442,37 @@ html[dir="rtl"] .page-note {
     right: auto;
     left: 15px;
   }
+
+  .features-section {
+    margin: 2rem 0;
+  }
+
+  .features-section h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+
+  .row.g-4 {
+    row-gap: 1.5rem !important;
+  }
 }
 
 @media (max-width: 460px) {
@@ -353,5 +492,41 @@ html[dir="rtl"] .page-note {
   html[dir="rtl"] .language-toggle {
     right: auto;
     left: 10px;
+  }
+
+  .features-section {
+    padding: 1.5rem 0;
+    margin: 1.5rem 0;
+  }
+
+  .features-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    height: 50px;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .learn-more-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
